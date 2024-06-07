@@ -51,7 +51,7 @@ Certifique-se de ter o Node.js e npm instalados em sua máquina. Recomenda-se us
 1. Clone o repositório:
    ```bash
    git clone https://github.com/lucasf5/stripe-store
-   cd loja-online
+   cd stripe-store
    ```
 
 2. Instale as dependências:
