@@ -1,0 +1,12 @@
+.header__title {
+  color: var(--title);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10.25px;
+}
