@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Loja Online com Next.js e Stripe
 
-## Getting Started
+Bem-vindo ao repositório da Loja Online! Este projeto é uma aplicação web de e-commerce desenvolvida usando Next.js para o frontend e Stripe para o processamento de pagamentos. Este README fornece uma visão geral do projeto, instruções para configuração e desenvolvimento, e outras informações úteis.
 
-First, run the development server:
+## Sumário
 
+- [Loja Online com Next.js e Stripe](#loja-online-com-nextjs-e-stripe)
+  - [Sumário](#sumário)
+  - [Visão Geral](#visão-geral)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Funcionalidades](#funcionalidades)
+  - [Instalação](#instalação)
+    - [Pré-requisitos](#pré-requisitos)
+    - [Passos para Instalação](#passos-para-instalação)
+  - [Configuração](#configuração)
+    - [Configurando o Stripe](#configurando-o-stripe)
+    - [Configuração Adicional](#configuração-adicional)
+  - [Uso](#uso)
+    - [Desenvolvimento](#desenvolvimento)
+    - [Build para Produção](#build-para-produção)
+  - [Contribuição](#contribuição)
+  - [Licença](#licença)
+
+## Visão Geral
+
+Este projeto é uma aplicação de e-commerce onde os usuários podem navegar por produtos, adicioná-los ao carrinho e finalizar a compra usando Stripe para o processamento de pagamentos. O objetivo é demonstrar a integração de um sistema de pagamentos seguro e eficiente com uma interface de usuário moderna e responsiva.
+
+## Tecnologias Utilizadas
+
+- **Next.js**: Framework React para renderização no lado do servidor e geração de sites estáticos.
+- **Stripe**: Plataforma de pagamentos para gerenciar transações financeiras.
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Tailwind CSS**: Framework CSS utilitário para estilização rápida e eficiente.
+
+## Funcionalidades
+
+- Navegação por produtos
+- Adição e remoção de produtos no carrinho
+- Processamento de pagamentos com Stripe
+- Confirmação de pedidos
+- Interface responsiva e moderna
+
+## Instalação
+
+### Pré-requisitos
+
+Certifique-se de ter o Node.js e npm instalados em sua máquina. Recomenda-se usar o Node.js na versão 14 ou superior.
+
+### Passos para Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/lucasf5/stripe-store
+   cd loja-online
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Crie um arquivo `.env.local` na raiz do projeto e adicione as seguintes variáveis de ambiente:
+   ```env
+   PUBLIC_KEY=your-stripe-publishable-key
+   SECRET_KEY=your-stripe-secret-key
+   ```
+
+## Configuração
+
+### Configurando o Stripe
+
+1. Crie uma conta no [Stripe](https://stripe.com).
+2. Obtenha as chaves da API na seção de desenvolvedores do dashboard do Stripe.
+3. Adicione as chaves no arquivo `.env.local` conforme mostrado na seção de instalação.
+
+### Configuração Adicional
+
+Se necessário, ajuste as configurações do projeto no arquivo `next.config.js`.
+
+## Uso
+
+### Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Acesse `http://localhost:3000` no navegador para ver a aplicação em execução.
+
+### Build para Produção
+
+Para criar uma versão otimizada para produção:
+```bash
+npm run build
+```
+Para iniciar o servidor em modo de produção:
+```bash
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contribuição
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Contribuições são bem-vindas! Por favor, siga os passos abaixo para contribuir:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Faça um fork do projeto.
+2. Crie uma branch para sua feature ou correção de bug:
+   ```bash
+   git checkout -b minha-nova-feature
+   ```
+3. Commit suas alterações:
+   ```bash
+   git commit -m 'Adiciona nova feature'
+   ```
+4. Envie para o branch original:
+   ```bash
+   git push origin minha-nova-feature
+   ```
+5. Crie um Pull Request.
 
-## Learn More
+## Licença
 
-To learn more about Next.js, take a look at the following resources:
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Agradecemos por utilizar nossa loja online! Se você tiver qualquer dúvida ou sugestão, sinta-se à vontade para abrir uma issue ou entrar em contato.
