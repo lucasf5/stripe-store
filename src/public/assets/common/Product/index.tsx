@@ -3,25 +3,23 @@ import React from "react";
 import "./styles.css";
 import { Heading, Text } from "@radix-ui/themes";
 
-interface ProductProps {
-  id: number;
-  name: string;
-  price: number;
-  image: StaticImageData;
-}
-
 interface ProductComponentProps {
-  product: ProductProps;
   classname: string;
+  product: {
+    id: string;
+    name: string;
+    price: number;
+    image: StaticImageData;
+  };
 }
 
 const Product = ({ product, classname }: ProductComponentProps) => {
   return (
     <div key={product.id} className={`product ${classname}`}>
-      <Image src={product.image} alt={product.name} />
+      <Image src={product.image} alt={product.name} width={300} height={300} />
       <div className="product-info">
         <Heading as="h2">{product.name}</Heading>
-        <Text as="span">${product.price}</Text>
+        <Text as="span">{product.price}</Text>
       </div>
     </div>
   );

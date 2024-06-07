@@ -1,5 +1,6 @@
+import { FetchProduct } from "@/fetchs/FetchProduct";
+import Products from "@/public/assets/common/Products";
 import React from "react";
-import Products from "./assets/common/Products";
 
 export const metadata = {
   title: "Home",
@@ -7,18 +8,15 @@ export const metadata = {
 };
 
 async function fetchData() {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-  return {
-    props: {},
-  };
+  const products = await FetchProduct();
+  return products;
 }
 
 export default async function Home() {
-  const { props } = await fetchData();
-
+  const products = await fetchData();
   return (
     <main>
-      <Products products={props} />
+      <Products products={products} />
     </main>
   );
 }
