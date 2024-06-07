@@ -120,7 +120,3 @@ Contribuições são bem-vindas! Por favor, siga os passos abaixo para contribui
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
-
----
-
-Agradecemos por utilizar nossa loja online! Se você tiver qualquer dúvida ou sugestão, sinta-se à vontade para abrir uma issue ou entrar em contato.
